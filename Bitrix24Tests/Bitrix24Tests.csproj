@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -52,13 +53,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Api\UnitTest1.cs" />
+    <Compile Include="CreateLeadTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="TestFiles\App 2017-05-16.log">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bitrix24\Bitrix24.csproj">
@@ -66,6 +62,12 @@
       <Name>Bitrix24</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="app.example.config" />
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
